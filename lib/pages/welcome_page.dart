@@ -3,6 +3,7 @@ import 'package:finnovation_task/pages/register_account_page.dart';
 import 'package:finnovation_task/widget/commont_text.dart';
 import 'package:finnovation_task/widget/commot_buttom.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class WelComePage extends StatelessWidget {
   WelComePage({Key key}) : super(key: key);
@@ -27,15 +28,19 @@ class WelComePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // SvgPicture.asset(
-                    //   'assets/crux-circle.svg',
-                    //   color: Colors.black,
-                    //   height: 150,
-                    // ),
+                    SvgPicture.asset(
+                      'assets/crux-circle.svg',
+                      color: Colors.black,
+                      width: 80,
+                      height: 100,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
                     Image.asset(
                       'assets/crux-logo.jpg',
-                      height: 80,
-                      width: 180,
+                      height: 60,
+                      width: 150,
                     ),
                   ],
                 ),

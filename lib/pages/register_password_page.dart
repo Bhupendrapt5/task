@@ -1,3 +1,4 @@
+import 'package:finnovation_task/dashboard/dashboard_page.dart';
 import 'package:finnovation_task/widget/bg_cirlce_widget.dart';
 import 'package:finnovation_task/widget/commont_text.dart';
 import 'package:finnovation_task/widget/commot_buttom.dart';
@@ -132,11 +133,12 @@ class _RegisterPasswordPageState extends State<RegisterPasswordPage> {
                     colors: [purlColor, purlColor],
                     strokeWidth: 2,
                     onPressed: () {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //       builder: (context) => OTPScreen(),
-                      //     ));
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DashBoardPage(),
+                          ),
+                          (Route<dynamic> route) => false);
                     },
                   ),
                 ],
