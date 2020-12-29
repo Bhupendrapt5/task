@@ -1,25 +1,21 @@
+import 'package:finnovation_task/pages/otp_page.dart';
 import 'package:finnovation_task/widget/bg_cirlce_widget.dart';
 import 'package:finnovation_task/widget/commont_text.dart';
 import 'package:finnovation_task/widget/commot_buttom.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  LoginPage({Key key}) : super(key: key);
+class RegisterAccountPage extends StatefulWidget {
+  RegisterAccountPage({Key key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _RegisterAccountPageState createState() => _RegisterAccountPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterAccountPageState extends State<RegisterAccountPage> {
   final purlColor = Color(0xff7a49e7);
-  bool hidePassword = true;
-  final _passowrdContoller = TextEditingController();
   final _emailContoller = TextEditingController();
-
   @override
   void dispose() {
-    _passowrdContoller.dispose();
     _emailContoller.dispose();
     super.dispose();
   }
@@ -29,6 +25,13 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Stack(
         children: [
+          Positioned(
+            left: -75,
+            top: -75,
+            child: BgHalfCirlce(
+              height: 250,
+            ),
+          ),
           Positioned(
             top: 50,
             left: 30,
@@ -41,14 +44,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           Positioned(
-            right: -75,
-            top: -75,
-            child: BgHalfCirlce(
-              height: 250,
-            ),
-          ),
-          Positioned(
-            left: -50,
+            right: -50,
             bottom: -75,
             child: BgHalfCirlce(
               height: 150,
@@ -66,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   Center(
                     child: CommonText(
-                      text: 'Login',
+                      text: 'Register an account',
                       fontSize: 22,
                       weight: FontWeight.bold,
                     ),
@@ -84,51 +80,11 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
-                  ),
-                  TextField(
-                    cursorColor: purlColor,
-                    controller: _passowrdContoller,
-                    obscureText: hidePassword,
-                    decoration: InputDecoration(
-                      suffix: GestureDetector(
-                        child: Icon(
-                          hidePassword
-                              ? Icons.visibility_off
-                              : Icons.visibility,
-                          color: hidePassword ? purlColor : Colors.grey,
-                        ),
-                        onTap: () {
-                          setState(() {
-                            hidePassword = !hidePassword;
-                          });
-                        },
-                      ),
-                      labelText: 'Password',
-                      contentPadding:
-                          const EdgeInsets.symmetric(horizontal: 15),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Align(
-                    alignment: Alignment.topRight,
-                    child: Text(
-                      'Forget Password',
-                      style: TextStyle(
-                        color: purlColor,
-                        decoration: TextDecoration.underline,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 40,
+                    height: 30,
                   ),
                   UnicornOutlineButton(
                     child: CommonText(
-                      text: 'Log in',
-                      gradientColor: [purlColor, purlColor],
+                      text: 'Get OTP',
                     ),
                     colors: [purlColor, purlColor],
                     strokeWidth: 2,
@@ -136,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => LoginPage(),
+                            builder: (context) => OTPScreen(),
                           ));
                     },
                   ),
@@ -145,10 +101,10 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   Center(
                       child: Text(
-                    'or login with',
+                    'or Register with',
                   )),
                   SizedBox(
-                    height: 20,
+                    height: 30,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -174,30 +130,6 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Center(
-                    child: RichText(
-                      text: TextSpan(
-                          text: 'Don\'t have an account?',
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
-                          children: <TextSpan>[
-                            TextSpan(
-                                text: ' Create an account',
-                                style: TextStyle(
-                                  decoration: TextDecoration.underline,
-                                  color: purlColor,
-                                ),
-                                recognizer: TapGestureRecognizer()
-                                  ..onTap = () {
-                                    // navigate to desired screen
-                                  })
-                          ]),
-                    ),
-                  )
                 ],
               ),
             ),

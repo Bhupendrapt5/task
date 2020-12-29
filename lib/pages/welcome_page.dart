@@ -1,4 +1,5 @@
 import 'package:finnovation_task/pages/login_page.dart';
+import 'package:finnovation_task/pages/register_account_page.dart';
 import 'package:finnovation_task/widget/commont_text.dart';
 import 'package:finnovation_task/widget/commot_buttom.dart';
 import 'package:flutter/material.dart';
@@ -80,7 +81,13 @@ class WelComePage extends StatelessWidget {
                       colors: listColor,
                       bgColor: listColor,
                       strokeWidth: 2,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RegisterAccountPage(),
+                            ));
+                      },
                     ),
                   ],
                 ),
