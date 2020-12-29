@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="270" height="270" viewBox="0 0 270 270">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="270" height="270" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.134" y1="0.146" x2="0.841" y2="0.849" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7a49e7"/>
+      <stop offset="1" stop-color="#51bccf"/>
+    </linearGradient>
+  </defs>
+  <g id="Repeat_Grid_2" data-name="Repeat Grid 2" clip-path="url(#clip-path)">
+    <g transform="translate(-1330 -183)">
+      <path id="Subtraction_1" data-name="Subtraction 1" d="M135,270a136,136,0,0,1-27.207-2.743A134.261,134.261,0,0,1,59.52,246.944a135.393,135.393,0,0,1-48.911-59.4,134.318,134.318,0,0,1-7.866-25.341,136.316,136.316,0,0,1,0-54.415A134.26,134.26,0,0,1,23.056,59.52a135.393,135.393,0,0,1,59.4-48.911,134.319,134.319,0,0,1,25.341-7.866,136.316,136.316,0,0,1,54.415,0A134.26,134.26,0,0,1,210.48,23.056a135.393,135.393,0,0,1,48.911,59.4,134.316,134.316,0,0,1,7.866,25.341,136.316,136.316,0,0,1,0,54.415,134.261,134.261,0,0,1-20.313,48.273,135.393,135.393,0,0,1-59.4,48.911,134.316,134.316,0,0,1-25.341,7.866A136,136,0,0,1,135,270Zm0-152a17,17,0,1,0,12.021,4.979A16.889,16.889,0,0,0,135,118Z" transform="translate(1330 183)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

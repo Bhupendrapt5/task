@@ -1,4 +1,4 @@
-import 'package:finnovation_task/pages/home_page.dart';
+import 'package:finnovation_task/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      home: WelComePage(),
     );
   }
 }
